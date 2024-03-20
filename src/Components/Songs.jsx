@@ -11,7 +11,7 @@ function Songs() {
         return res.json();
       })
       .then((data) => {
-        setBSong(data);
+        setSongs(data);
       })
       .catch((error) => console.error(error));
   }, []);

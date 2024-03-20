@@ -2,7 +2,7 @@ function Home() {
     return (
       <div>
         <h2>Welcome</h2>
-        <h3>To the greatest bookmarks app!</h3>
+        <h3>To the greatest Music app!</h3>
       </div>
     );
   }

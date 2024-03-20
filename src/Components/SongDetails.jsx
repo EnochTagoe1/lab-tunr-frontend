@@ -53,7 +53,7 @@ function SongDetails() {
           <button onClick={deleteSong}>Delete</button>
         </div>
       </div>
-      <Reviews />
+      {/* <Reviews /> */}
     </article>
   );
 }
