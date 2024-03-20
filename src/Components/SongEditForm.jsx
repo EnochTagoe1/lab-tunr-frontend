@@ -9,11 +9,13 @@ function SongEditForm() {
 
   const [song, setSong] = useState({
     name: "",
-    url: "",
-    category: "",
-    description: "",
+    artist: "",
+    album: "",
     is_favorite: false,
+    time: "",
   });
+
+
 
   const handleTextChange = (event) => {
     setSong({ ...song, [event.target.id]: event.target.value });

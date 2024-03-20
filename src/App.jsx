@@ -6,6 +6,7 @@ import Song from "./Components/Song";
 import SongDetails from "./Components/SongDetails";
 import Songs from "./Components/Songs";
 import Home from "./Pages/Home";
+import Index from "./Pages/Index";
 
 
 const App = () => {
@@ -22,16 +23,14 @@ const API=import.meta.env.VITE_BASE_URL;
       <main> 
         <Routes>
         
-        <Route path="/"element={<Home/>}/>
+        <Route path="/"element={<Home />}/>
         <Route path="/song"element={<Song/>}/>
         <Route path="/songs"element={<Songs/>}/>
           <Route path="/songs/:id"element={<SongDetails/>}/>
          
         </Routes>
 
-        <h1>
-    Tunr Musical App
-    </h1>
+       
     {/* {songs.map((song) =>
     <div key={song.id}>
     <p>Song Name: {song.name}</p>

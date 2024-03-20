@@ -7,7 +7,7 @@ function Song({ song }) {
     <tr>
       <td>
         {song.is_favorite ? (
-          <span>⭐️</span>
+          <span>🎧</span>
         ) : (
           <span>&nbsp; &nbsp; &nbsp;</span>
         )}
