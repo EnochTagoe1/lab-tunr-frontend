@@ -7,6 +7,7 @@ import SongDetails from "./Components/SongDetails";
 import Songs from "./Components/Songs";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
+import SongNewForm from "./Components/SongNewForm";
 
 
 const App = () => {
@@ -24,10 +25,10 @@ const API=import.meta.env.VITE_BASE_URL;
         <Routes>
         
         <Route path="/"element={<Home />}/>
-        <Route path="/song"element={<Song/>}/>
         <Route path="/songs"element={<Songs/>}/>
-          <Route path="/songs/:id"element={<SongDetails/>}/>
-         
+         <Route path="/songs/new" element={<SongNewForm/>}/>
+          <Route path="/song/:id"element={<SongDetails/>}/>
+        <Route path="/song"element={<Song/>}/>
         </Routes>
 
        

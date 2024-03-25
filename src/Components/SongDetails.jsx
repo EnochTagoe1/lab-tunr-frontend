@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Reviews from './Reviews'
 
-const API = import.meta.env.VITE_BASE_URL;
 
 function SongDetails() {
-  const [song, setSong] = useState([]);
+    const API = import.meta.env.VITE_BASE_URL;
+    console.log(API)
+  const [song, setSong] = useState({
+  name: "",
+  artist: "",
+  album: "",
+  time: "",
+  is_favorite: false});
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -31,13 +37,14 @@ function SongDetails() {
         {song.is_favorite ? <span>⭐️</span> : null} {song.name}
       </h3>
       <h5>
-        <span>
-          <a href={song.url}>{song.name}</a>
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {song.url}
+        
+          
+        
+       
       </h5>
-      <h6>{song.category}</h6>
-      <p>{song.description}</p>
+      <h6>{song.artist}</h6>
+      <p>{song.album}</p>
+      <p>{song.time}</p>
       <div className="showNavigation">
         <div>
           <Link to={`/songs`}>

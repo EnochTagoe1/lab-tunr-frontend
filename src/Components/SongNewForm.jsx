@@ -7,11 +7,11 @@ function SongNewForm() {
   const navigate = useNavigate();
   const [song, setSong] = useState({
     name: "",
-    url: "",
-    category: "",
-    is_favorite: false,
-    description: "",
-  });
+  artist: "",
+  album: "",
+  time: "",
+  is_favorite: false});
+
 
   // Add a song. Redirect to the index view.
   const addSong = () => {
@@ -41,6 +41,13 @@ function SongNewForm() {
     addSong();
   };
 
+//   "id": 1,
+// "name": "Tropical Legs",
+// "artist": "Earl Klugh",
+// "album": "Sunshine",
+// "time": "3:44",
+// "is_favorite": true
+
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>
@@ -53,24 +60,32 @@ function SongNewForm() {
           placeholder="Name of Song"
           required
         />
-        <label htmlFor="url">URL:</label>
+        <label htmlFor="artist">Artist:</label>
         <input
-          id="url"
+          id="artist"
           type="text"
-          pattern="http[s]*://.+"
+          
           required
-          value={song.url}
-          placeholder="http://"
+          value={song.artist}
+          placeholder="artist"
           onChange={handleTextChange}
         />
-        <label htmlFor="category">Category:</label>
+        <label htmlFor="album">Album:</label>
         <input
-          id="category"
+          id="album"
           type="text"
-          name="category"
-          value={song.category}
-          placeholder="educational, inspirational, ..."
+          name="album"
+          value={song.album}
+          placeholder="album"
           onChange={handleTextChange}
+        />
+        <label htmlFor="time">Time:</label>
+        <input
+          id="time"
+          name="time"
+          value={song.time}
+          onChange={handleTextChange}
+          placeholder="time"
         />
         <label htmlFor="is_favorite">Favorite:</label>
         <input
@@ -79,14 +94,7 @@ function SongNewForm() {
           onChange={handleCheckboxChange}
           checked={song.is_favorite}
         />
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          value={song.description || ""}
-          onChange={handleTextChange}
-          placeholder="Describe why you selected this song"
-        />
+        
         <br />
         <input type="submit" />
       </form>
