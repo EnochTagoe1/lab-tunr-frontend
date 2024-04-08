@@ -11,12 +11,12 @@ import SongNewForm from "./Components/SongNewForm";
 
 
 const App = () => {
-  // const [songs, setSongs] = useState([]);
+   const [songs, setSongs] = useState([]);
 const API=import.meta.env.VITE_BASE_URL;
 
-// useEffect(() => {
-// fetch(`${API}/songs`).then(res => res.json()).then(data => setSongs(data));
-// }, []);
+useEffect(() => {
+fetch(`${API}/songs`).then(res => res.json()).then(data => setSongs(data));
+}, []);
   return (<div>
     <Router>
       <NavBar/>
