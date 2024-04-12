@@ -76,7 +76,7 @@ function SongEditForm() {
           type="text"
           pattern="http[s]*://.+"
           required
-          value={bookmark.url}
+          value={song.url}
           placeholder="http://"
           onChange={handleTextChange}
         />
